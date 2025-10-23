@@ -34,13 +34,13 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection("hero")}>
             <img src={logo} alt="Jotem Agro Allied Limited" className="h-12 w-12 rounded-full object-cover" />
-            <span className={`text-lg font-bold transition-colors ${isScrolled ? "text-primary" : "text-white"}`}>
+            <span className={`text-sm md:text-lg font-bold transition-colors ${isScrolled ? "text-primary" : "text-white"}`}>
               Jotem Agro Allied Limited
             </span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection("hero")} 
               className={`transition-colors font-semibold ${
@@ -88,7 +88,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden transition-colors ${
+            className={`lg:hidden transition-colors ${
               isScrolled ? "text-foreground hover:text-primary" : "text-white hover:text-secondary"
             }`}
           >
@@ -98,33 +98,33 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in">
+          <div className="lg:hidden py-4 border-t border-border animate-fade-in bg-background/95 backdrop-blur-md rounded-b-lg">
             <div className="flex flex-col space-y-4">
               <button
                 onClick={() => scrollToSection("hero")}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
+                className="text-foreground hover:text-primary transition-colors font-semibold text-left px-4 py-2"
               >
                 Home
               </button>
               <button
                 onClick={() => scrollToSection("about")}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
+                className="text-foreground hover:text-primary transition-colors font-semibold text-left px-4 py-2"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("services")}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
+                className="text-foreground hover:text-primary transition-colors font-semibold text-left px-4 py-2"
               >
                 Services
               </button>
               <button
                 onClick={() => scrollToSection("gallery")}
-                className="text-foreground hover:text-primary transition-colors font-medium text-left"
+                className="text-foreground hover:text-primary transition-colors font-semibold text-left px-4 py-2"
               >
                 Gallery
               </button>
-              <Button onClick={() => scrollToSection("contact")} className="bg-primary hover:bg-primary/90 w-full">
+              <Button onClick={() => scrollToSection("contact")} className="bg-primary hover:bg-primary/90 mx-4">
                 Contact Us
               </Button>
             </div>

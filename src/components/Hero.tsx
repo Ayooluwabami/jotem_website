@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img src={heroImage} alt="Jotem Agro Farm" className="w-full h-full object-cover" />
@@ -19,21 +19,21 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 z-10 text-center">
+      <div className="container mx-auto px-4 z-10 text-center py-12">
         <div className="max-w-4xl mx-auto animate-fade-in-up">
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
             Empowering Agriculture,
             <br />
             <span className="text-secondary">Nourishing Communities</span>
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto px-4">
             Leading the way in modern agricultural practices, quality supplies, and sustainable farming solutions across Nigeria.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
             <Button
               size="lg"
               onClick={() => scrollToSection("about")}
-              className="bg-secondary hover:bg-secondary/90 text-foreground font-semibold px-8 py-6 text-lg group"
+              className="w-full sm:w-auto bg-secondary hover:bg-secondary/90 text-foreground font-semibold px-6 md:px-8 py-5 md:py-6 text-base md:text-lg group"
             >
               Learn More
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -42,7 +42,7 @@ const Hero = () => {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection("contact")}
-              className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-8 py-6 text-lg"
+              className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-primary font-semibold px-6 md:px-8 py-5 md:py-6 text-base md:text-lg"
             >
               Get In Touch
             </Button>
@@ -51,7 +51,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:flex">
         <div className="w-6 h-10 border-2 border-white rounded-full flex items-start justify-center p-2">
           <div className="w-1.5 h-3 bg-white rounded-full"></div>
         </div>
