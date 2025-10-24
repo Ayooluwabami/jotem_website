@@ -42,5 +42,12 @@
           "source": "/favicon.ico",
           "destination": "/favicon.ico"
         }
+      ],
+      "redirects": [
+        {
+          "source": "/(apple-touch-icon.*|favicon.*(?!ico$|png$))",
+          "destination": "/favicon.ico",
+          "statusCode": 301
+        }
       ]
     }
