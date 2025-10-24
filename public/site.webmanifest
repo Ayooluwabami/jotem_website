@@ -1,0 +1,19 @@
+{
+  "name": "Jotem Agro Allied Limited",
+  "short_name": "Jotem Agro",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "theme_color": "#2d7a3e",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

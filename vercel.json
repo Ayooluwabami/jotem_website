@@ -1,0 +1,13 @@
+{
+  "headers": [
+    {
+      "source": "/(favicon.ico|favicon-32x32.png|logo.jpg)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
