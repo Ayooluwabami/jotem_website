@@ -26,8 +26,8 @@ const Services = () => {
     },
     {
       icon: Wheat,
-      title: "Crop Management",
-      description: "End-to-end support for crop production, pest control, and harvest optimization.",
+      title: "Commodity Trading",
+      description: "End-to-end agricultural commodity trading connecting Nigerian farmers to local and global markets.",
       image: null,
     },
   ];
@@ -79,7 +79,7 @@ const Services = () => {
             </div>
             <div>
               <div className="text-4xl font-bold text-primary mb-2">500+</div>
-              <div className="text-muted-foreground">Happy Farmers</div>
+              <div className="text-muted-foreground">Farmers Supported</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-primary mb-2">100%</div>

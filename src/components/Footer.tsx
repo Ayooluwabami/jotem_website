@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Instagram, Youtube, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
@@ -71,29 +72,34 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#hero" className="text-primary-foreground/80 hover:text-secondary transition-colors">
-                  Home
-                </a>
+                <Link to="/" className="text-primary-foreground/80 hover:text-secondary transition-colors">
+                  Products
+                </Link>
               </li>
               <li>
-                <a href="#about" className="text-primary-foreground/80 hover:text-secondary transition-colors">
+                <Link to="/impact" className="text-primary-foreground/80 hover:text-secondary transition-colors">
+                  Our Impact
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-primary-foreground/80 hover:text-secondary transition-colors">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="text-primary-foreground/80 hover:text-secondary transition-colors">
+                <Link to="/services" className="text-primary-foreground/80 hover:text-secondary transition-colors">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#gallery" className="text-primary-foreground/80 hover:text-secondary transition-colors">
+                <Link to="/gallery" className="text-primary-foreground/80 hover:text-secondary transition-colors">
                   Gallery
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="text-primary-foreground/80 hover:text-secondary transition-colors">
+                <Link to="/contact" className="text-primary-foreground/80 hover:text-secondary transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

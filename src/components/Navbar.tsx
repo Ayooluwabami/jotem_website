@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,13 +17,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
-    }
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
   };
+
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <nav
@@ -32,57 +32,76 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection("hero")}>
+          <Link to="/" className="flex items-center space-x-3">
             <img src={logo} alt="Jotem Agro Allied Limited" className="h-12 w-12 rounded-full object-cover" />
             <span className={`text-sm md:text-lg font-bold transition-colors ${isScrolled ? "text-primary" : "text-white"}`}>
               Jotem Agro Allied Limited
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection("hero")} 
+            <Link 
+              to="/" 
               className={`transition-colors font-semibold ${
+                isActive("/") ? "text-secondary" : ""
+              } ${
                 isScrolled ? "text-foreground hover:text-primary" : "text-white hover:text-secondary"
               }`}
             >
-              Home
-            </button>
-            <button 
-              onClick={() => scrollToSection("about")} 
+              Products
+            </Link>
+            <Link 
+              to="/about" 
               className={`transition-colors font-semibold ${
+                isActive("/about") ? "text-secondary" : ""
+              } ${
                 isScrolled ? "text-foreground hover:text-primary" : "text-white hover:text-secondary"
               }`}
             >
               About
-            </button>
-            <button 
-              onClick={() => scrollToSection("services")} 
+            </Link>
+            <Link 
+              to="/services" 
               className={`transition-colors font-semibold ${
+                isActive("/services") ? "text-secondary" : ""
+              } ${
                 isScrolled ? "text-foreground hover:text-primary" : "text-white hover:text-secondary"
               }`}
             >
               Services
-            </button>
-            <button 
-              onClick={() => scrollToSection("gallery")} 
+            </Link>
+            <Link 
+              to="/gallery" 
               className={`transition-colors font-semibold ${
+                isActive("/gallery") ? "text-secondary" : ""
+              } ${
                 isScrolled ? "text-foreground hover:text-primary" : "text-white hover:text-secondary"
               }`}
             >
               Gallery
-            </button>
-            <Button 
-              onClick={() => scrollToSection("contact")} 
-              className={`font-semibold ${
-                isScrolled 
-                  ? "bg-primary hover:bg-primary/90" 
-                  : "bg-secondary hover:bg-secondary/90 text-foreground"
+            </Link>
+            <Link 
+              to="/impact" 
+              className={`transition-colors font-semibold ${
+                isActive("/impact") ? "text-secondary" : ""
+              } ${
+                isScrolled ? "text-foreground hover:text-primary" : "text-white hover:text-secondary"
               }`}
             >
-              Contact Us
-            </Button>
+              Our Impact
+            </Link>
+            <Link to="/contact">
+              <Button 
+                className={`font-semibold ${
+                  isScrolled 
+                    ? "bg-primary hover:bg-primary/90 text-primary-foreground" 
+                    : "bg-primary hover:bg-primary/90 text-primary-foreground"
+                }`}
+              >
+                Contact Us
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -100,33 +119,56 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-border animate-fade-in bg-background/95 backdrop-blur-md rounded-b-lg">
             <div className="flex flex-col space-y-4">
-              <button
-                onClick={() => scrollToSection("hero")}
-                className="text-foreground hover:text-primary transition-colors font-semibold text-left px-4 py-2"
+              <Link
+                to="/"
+                onClick={closeMobileMenu}
+                className={`text-foreground hover:text-primary transition-colors font-semibold text-left px-4 py-2 ${
+                  isActive("/") ? "text-primary" : ""
+                }`}
               >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="text-foreground hover:text-primary transition-colors font-semibold text-left px-4 py-2"
+                Products
+              </Link>
+              <Link
+                to="/about"
+                onClick={closeMobileMenu}
+                className={`text-foreground hover:text-primary transition-colors font-semibold text-left px-4 py-2 ${
+                  isActive("/about") ? "text-primary" : ""
+                }`}
               >
                 About
-              </button>
-              <button
-                onClick={() => scrollToSection("services")}
-                className="text-foreground hover:text-primary transition-colors font-semibold text-left px-4 py-2"
+              </Link>
+              <Link
+                to="/services"
+                onClick={closeMobileMenu}
+                className={`text-foreground hover:text-primary transition-colors font-semibold text-left px-4 py-2 ${
+                  isActive("/services") ? "text-primary" : ""
+                }`}
               >
                 Services
-              </button>
-              <button
-                onClick={() => scrollToSection("gallery")}
-                className="text-foreground hover:text-primary transition-colors font-semibold text-left px-4 py-2"
+              </Link>
+              <Link
+                to="/gallery"
+                onClick={closeMobileMenu}
+                className={`text-foreground hover:text-primary transition-colors font-semibold text-left px-4 py-2 ${
+                  isActive("/gallery") ? "text-primary" : ""
+                }`}
               >
                 Gallery
-              </button>
-              <Button onClick={() => scrollToSection("contact")} className="bg-primary hover:bg-primary/90 mx-4">
-                Contact Us
-              </Button>
+              </Link>
+              <Link
+                to="/impact"
+                onClick={closeMobileMenu}
+                className={`text-foreground hover:text-primary transition-colors font-semibold text-left px-4 py-2 ${
+                  isActive("/impact") ? "text-primary" : ""
+                }`}
+              >
+                Our Impact
+              </Link>
+              <Link to="/contact" onClick={closeMobileMenu} className="px-4">
+                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-full">
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
         )}

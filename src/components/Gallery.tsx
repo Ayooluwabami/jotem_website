@@ -3,6 +3,8 @@ import warehouseImage from "@/assets/warehouse.jpg";
 import livestockImage from "@/assets/livestock.jpg";
 import consultingImage from "@/assets/consulting.jpg";
 import heroImage from "@/assets/hero-farm.jpg";
+import cassavaPlantImage from "@/assets/gallery-cassava-plant.jpg";
+import truckImage from "@/assets/gallery-truck.jpg";
 
 const Gallery = () => {
   const images = [
@@ -10,6 +12,8 @@ const Gallery = () => {
     { src: warehouseImage, alt: "Agricultural warehouse", title: "Quality Supplies" },
     { src: livestockImage, alt: "Livestock farming", title: "Livestock & Poultry" },
     { src: consultingImage, alt: "Farm consulting", title: "Expert Consultation" },
+    { src: cassavaPlantImage, alt: "Cassava plant cultivation", title: "Cassava Farming" },
+    { src: truckImage, alt: "Product delivery truck", title: "Logistics & Distribution" },
   ];
 
   return (
@@ -22,7 +26,7 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {images.map((image, index) => (
             <Card
               key={index}
@@ -47,7 +51,7 @@ const Gallery = () => {
 
         <div className="mt-12 text-center">
           <p className="text-muted-foreground italic">
-            More images and updates coming soon. Follow us on social media for the latest from our farms!
+            More images and updates coming soon. Follow us on social media for the latest from our operations!
           </p>
         </div>
       </div>
