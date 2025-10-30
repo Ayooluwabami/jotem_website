@@ -25,16 +25,20 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-primary/95 backdrop-blur-sm shadow-md"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled ? "bg-background/95 backdrop-blur-md shadow-xl" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <img src={logo} alt="Jotem Agro Allied Limited" className="h-12 w-12 rounded-full object-cover" />
-            <span className={`text-sm md:text-lg font-bold transition-colors ${isScrolled ? "text-primary" : "text-white"}`}>
+          <Link to="/" className="flex items-center space-x-3 group cursor-pointer">
+            <img 
+              src={logo} 
+              alt="Jotem Agro Allied Limited" 
+              className="h-12 w-12 rounded-full object-cover transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3" 
+            />
+            <span className={`text-sm md:text-lg font-bold transition-all duration-300 ${isScrolled ? "text-primary" : "text-white"} group-hover:text-secondary`}>
               Jotem Agro Allied Limited
             </span>
           </Link>
@@ -43,60 +47,60 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-8">
             <Link 
               to="/" 
-              className={`transition-colors font-semibold ${
+              className={`relative transition-all duration-300 font-semibold ${
                 isActive("/") ? "text-secondary" : ""
               } ${
                 isScrolled ? "text-foreground hover:text-primary" : "text-white hover:text-secondary"
-              }`}
+              } after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
             >
               Products
             </Link>
             <Link 
               to="/about" 
-              className={`transition-colors font-semibold ${
+              className={`relative transition-all duration-300 font-semibold ${
                 isActive("/about") ? "text-secondary" : ""
               } ${
                 isScrolled ? "text-foreground hover:text-primary" : "text-white hover:text-secondary"
-              }`}
+              } after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
             >
               About
             </Link>
             <Link 
               to="/services" 
-              className={`transition-colors font-semibold ${
+              className={`relative transition-all duration-300 font-semibold ${
                 isActive("/services") ? "text-secondary" : ""
               } ${
                 isScrolled ? "text-foreground hover:text-primary" : "text-white hover:text-secondary"
-              }`}
+              } after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
             >
               Services
             </Link>
             <Link 
               to="/gallery" 
-              className={`transition-colors font-semibold ${
+              className={`relative transition-all duration-300 font-semibold ${
                 isActive("/gallery") ? "text-secondary" : ""
               } ${
                 isScrolled ? "text-foreground hover:text-primary" : "text-white hover:text-secondary"
-              }`}
+              } after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
             >
               Gallery
             </Link>
             <Link 
               to="/impact" 
-              className={`transition-colors font-semibold ${
+              className={`relative transition-all duration-300 font-semibold ${
                 isActive("/impact") ? "text-secondary" : ""
               } ${
                 isScrolled ? "text-foreground hover:text-primary" : "text-white hover:text-secondary"
-              }`}
+              } after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left`}
             >
               Our Impact
             </Link>
             <Link to="/contact">
               <Button 
-                className={`font-semibold ${
+                className={`font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg ${
                   isScrolled 
-                    ? "bg-primary hover:bg-primary/90 text-primary-foreground" 
-                    : "bg-primary hover:bg-primary/90 text-primary-foreground"
+                    ? "bg-secondary hover:bg-secondary/90 text-foreground" 
+                    : "bg-secondary hover:bg-secondary/90 text-foreground"
                 }`}
               >
                 Contact Us
@@ -165,7 +169,7 @@ const Navbar = () => {
                 Our Impact
               </Link>
               <Link to="/contact" onClick={closeMobileMenu} className="px-4">
-                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-full">
+                <Button className="bg-secondary hover:bg-secondary/90 text-foreground w-full font-semibold">
                   Contact Us
                 </Button>
               </Link>

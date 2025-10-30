@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const GalleryPage = () => {
   return (
@@ -16,6 +17,7 @@ const GalleryPage = () => {
       <Gallery />
       <Footer />
       <FloatingButtons />
+      <ScrollToTop />
     </div>
   );
 };

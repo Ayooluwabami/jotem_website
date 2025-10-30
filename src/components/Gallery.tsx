@@ -1,19 +1,23 @@
 import { Card } from "@/components/ui/card";
-import warehouseImage from "@/assets/warehouse.jpg";
-import livestockImage from "@/assets/livestock.jpg";
-import consultingImage from "@/assets/consulting.jpg";
-import heroImage from "@/assets/hero-farm.jpg";
-import cassavaPlantImage from "@/assets/gallery-cassava-plant.jpg";
-import truckImage from "@/assets/gallery-truck.jpg";
+import grainProcessingImage from "@/assets/gallery-grain-processing.jpg";
+import scorpionTruckImage from "@/assets/gallery-scorpion-truck.jpg";
+import facilityTrucksImage from "@/assets/gallery-facility-trucks.jpg";
+import loadedTruckImage from "@/assets/gallery-loaded-truck.jpg";
+import deliveryStaffImage from "@/assets/gallery-delivery-staff.jpg";
+import teamGroupImage from "@/assets/gallery-team-group.jpg";
+import blueTruckImage from "@/assets/gallery-blue-truck.jpg";
+import grainUnloadingImage from "@/assets/gallery-grain-unloading.jpg";
 
 const Gallery = () => {
   const images = [
-    { src: heroImage, alt: "Modern agricultural farm", title: "Our Farm Operations" },
-    { src: warehouseImage, alt: "Agricultural warehouse", title: "Quality Supplies" },
-    { src: livestockImage, alt: "Livestock farming", title: "Livestock & Poultry" },
-    { src: consultingImage, alt: "Farm consulting", title: "Expert Consultation" },
-    { src: cassavaPlantImage, alt: "Cassava plant cultivation", title: "Cassava Farming" },
-    { src: truckImage, alt: "Product delivery truck", title: "Logistics & Distribution" },
+    { src: grainProcessingImage, alt: "Grain processing at our facility", title: "Grain Processing" },
+    { src: scorpionTruckImage, alt: "Scorpion delivery truck with loaded grain", title: "Logistics Fleet" },
+    { src: loadedTruckImage, alt: "Truck loaded with agricultural products", title: "Product Distribution" },
+    { src: deliveryStaffImage, alt: "Staff member with delivery truck", title: "Dedicated Team" },
+    { src: teamGroupImage, alt: "Jotem Agro team at youth initiative event", title: "Community Engagement" },
+    { src: blueTruckImage, alt: "Blue delivery truck at facility", title: "Transport Operations" },
+    { src: grainUnloadingImage, alt: "Grain unloading process", title: "Warehouse Operations" },
+    { src: facilityTrucksImage, alt: "Fleet of trucks at warehouse facility", title: "Our Facility" },
   ];
 
   return (
@@ -26,33 +30,29 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {images.map((image, index) => (
             <Card
               key={index}
-              className="group overflow-hidden cursor-pointer animate-scale-in"
+              className="group overflow-hidden cursor-pointer animate-scale-in hover:shadow-2xl transition-all duration-500 border-2 hover:border-primary"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-72 overflow-hidden">
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-110 transition-all duration-700"
+                  loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-4 text-white">
-                    <h3 className="font-bold text-lg">{image.title}</h3>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
+                  <div className="p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <h3 className="font-bold text-lg mb-1">{image.title}</h3>
+                    <div className="h-1 w-0 bg-secondary group-hover:w-12 transition-all duration-500"></div>
                   </div>
                 </div>
               </div>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <p className="text-muted-foreground italic">
-            More images and updates coming soon. Follow us on social media for the latest from our operations!
-          </p>
         </div>
       </div>
     </section>

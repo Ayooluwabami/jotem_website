@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import Services from "@/components/Services";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const ServicesPage = () => {
   return (
@@ -16,6 +17,7 @@ const ServicesPage = () => {
       <Services />
       <Footer />
       <FloatingButtons />
+      <ScrollToTop />
     </div>
   );
 };

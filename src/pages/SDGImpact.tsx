@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import ScrollToTop from "@/components/ScrollToTop";
+import CTASection from "@/components/CTASection";
 import povertyImage from "@/assets/sdg-poverty.jpg";
 import hungerImage from "@/assets/sdg-hunger.jpg";
 import accessImage from "@/assets/sdg-access.jpg";
@@ -239,8 +241,10 @@ const SDGImpact = () => {
         </div>
       </section>
 
+      <CTASection />
       <Footer />
       <FloatingButtons />
+      <ScrollToTop />
     </div>
   );
 };

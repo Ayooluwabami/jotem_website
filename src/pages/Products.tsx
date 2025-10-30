@@ -6,6 +6,10 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import CTASection from "@/components/CTASection";
+import TrustBadges from "@/components/TrustBadges";
+import FAQ from "@/components/FAQ";
+import ScrollToTop from "@/components/ScrollToTop";
 import heroImage1 from "@/assets/products-hero-1.jpg";
 import heroImage2 from "@/assets/products-hero-2.jpg";
 import cassavaImage from "@/assets/product-cassava.jpg";
@@ -47,7 +51,7 @@ const Products = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-      
+     
       {/* Hero Section with Animated Images */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         {/* Animated Background Images */}
@@ -93,9 +97,9 @@ const Products = () => {
                   size="lg"
                   variant="outline"
                   className={`
-                    w-full sm:w-auto 
-                    border-2 border-white text-white 
-                    bg-transparent hover:bg-white hover:text-primary 
+                    w-full sm:w-auto
+                    border-2 border-white text-white
+                    bg-transparent hover:bg-white hover:text-primary
                     font-semibold px-6 md:px-8 py-5 md:py-6 text-base md:text-lg
                   `}
                 >
@@ -200,8 +204,12 @@ const Products = () => {
         </div>
       </section>
 
+      <TrustBadges />
+      <CTASection />
+      <FAQ />
       <Footer />
       <FloatingButtons />
+      <ScrollToTop />
     </div>
   );
 };

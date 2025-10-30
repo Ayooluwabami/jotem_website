@@ -9,10 +9,14 @@ interface HeroSectionProps {
 const HeroSection = ({ title, subtitle, description }: HeroSectionProps) => {
   return (
     <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Image */}
+      {/* Background Image with Parallax Effect */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Jotem Agro Farm" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70"></div>
+        <img 
+          src={heroImage} 
+          alt="Jotem Agro Farm" 
+          className="w-full h-full object-cover animate-[subtle-zoom_20s_ease-in-out_infinite]" 
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70 animate-gradient"></div>
       </div>
 
       {/* Content */}

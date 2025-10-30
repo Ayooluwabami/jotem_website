@@ -18,53 +18,53 @@ const Footer = () => {
             <p className="text-primary-foreground/80 mb-4">
               Empowering agriculture and nourishing communities through innovation, quality, and sustainable farming solutions.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://facebook.com/JotemAgroAlliedLimited"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-secondary transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="https://x.com/jotemagro"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-secondary transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
-              <a
-                href="https://instagram.com/jotemagro"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-secondary transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="https://youtube.com/@jotemagro"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-secondary transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube size={20} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/jotemagro"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-secondary transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
-            </div>
+              <div className="flex space-x-4">
+                <a
+                  href="https://facebook.com/JotemAgroAlliedLimited"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-secondary transition-all duration-300 hover:scale-110"
+                  aria-label="Facebook"
+                >
+                  <Facebook size={20} />
+                </a>
+                <a
+                  href="https://x.com/jotemagro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-secondary transition-all duration-300 hover:scale-110"
+                  aria-label="Twitter"
+                >
+                  <Twitter size={20} />
+                </a>
+                <a
+                  href="https://instagram.com/jotemagro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-secondary transition-all duration-300 hover:scale-110"
+                  aria-label="Instagram"
+                >
+                  <Instagram size={20} />
+                </a>
+                <a
+                  href="https://youtube.com/@jotemagro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-secondary transition-all duration-300 hover:scale-110"
+                  aria-label="YouTube"
+                >
+                  <Youtube size={20} />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/jotemagro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-secondary transition-all duration-300 hover:scale-110"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={20} />
+                </a>
+              </div>
           </div>
 
           {/* Quick Links */}
@@ -107,21 +107,28 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h3 className="font-bold text-lg mb-4">Contact</h3>
-            <ul className="space-y-2 text-primary-foreground/80">
+            <ul className="space-y-3 text-primary-foreground/80">
               <li>
-                <a href="tel:+2347041181822" className="hover:text-secondary transition-colors">
-                  +234 704 118 1822
+                <a href="tel:+2347041181822" className="hover:text-secondary transition-colors flex items-center space-x-2">
+                  <span>📞</span>
+                  <span>+234 704 118 1822</span>
                 </a>
               </li>
               <li>
-                <a href="tel:+2348163011685" className="hover:text-secondary transition-colors">
-                  +234 816 301 1685
+                <a href="tel:+2348163011685" className="hover:text-secondary transition-colors flex items-center space-x-2">
+                  <span>📞</span>
+                  <span>+234 816 301 1685</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@jotemagro.com" className="hover:text-secondary transition-colors flex items-center space-x-2">
+                  <span>✉️</span>
+                  <span>info@jotemagro.com</span>
                 </a>
               </li>
               <li className="pt-2">
-                <strong>Head Office:</strong>
-                <br />
-                Km 17, Ibadan-Ife Expressway, Olope-Meji, Ibadan
+                <strong className="block mb-1">Head Office:</strong>
+                <span className="text-sm">Km 17, Ibadan-Ife Expressway,<br />Olope-Meji, Ibadan</span>
               </li>
             </ul>
           </div>
