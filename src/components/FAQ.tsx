@@ -25,7 +25,7 @@ const FAQ = () => {
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept various payment methods including bank transfers, checks, and other secure payment options. Our team will work with you to arrange convenient payment terms.",
+      answer: "We accept various payment methods including bank transfers, cheques, and other secure payment options. Our team will work with you to arrange convenient payment terms.",
     },
     {
       question: "Can I visit your facility?",

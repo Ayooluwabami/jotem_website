@@ -15,6 +15,9 @@ import heroImage2 from "@/assets/products-hero-2.jpg";
 import cassavaImage from "@/assets/product-cassava.jpg";
 import maizeImage from "@/assets/product-maize.jpg";
 import soybeanImage from "@/assets/product-soybean.jpg";
+import cashewImage from "@/assets/product-cashew.jpg";
+import shearNutsImage from "@/assets/product-shear-nuts.jpg";
+import sorghumImage from "@/assets/product-sorghum.jpg";
 
 const Products = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -29,14 +32,14 @@ const Products = () => {
 
   const products = [
     {
-      name: "Premium Cassava",
+      name: "Cassava",
       description: "High-quality cassava tubers sourced directly from local farmers. Rich in carbohydrates and perfect for various culinary applications. Available in bulk quantities.",
       image: cassavaImage,
       category: "Root Crops",
     },
     {
       name: "Yellow Maize",
-      description: "Premium yellow maize/corn with excellent nutritional value. Ideal for livestock feed and human consumption. Carefully selected and processed for quality.",
+      description: "Yellow maize/corn with excellent nutritional value. Ideal for livestock feed and human consumption. Carefully selected and processed for quality.",
       image: maizeImage,
       category: "Grains",
     },
@@ -45,6 +48,24 @@ const Products = () => {
       description: "Protein-rich soybeans perfect for animal feed and food processing. Sustainably sourced from Nigerian farms with guaranteed quality and freshness.",
       image: soybeanImage,
       category: "Legumes",
+    },
+    {
+      name: "Cashew Nuts",
+      description: "Premium quality cashew nuts sourced from local farmers. Rich in healthy fats and perfect for snacking or processing. Available in bulk quantities.",
+      image: cashewImage,
+      category: "Nuts",
+    },
+    {
+      name: "Shear Nuts",
+      description: "High-quality shear nuts sustainably harvested from Nigerian farms. Excellent source of natural oils and perfect for various applications.",
+      image: shearNutsImage,
+      category: "Nuts",
+    },
+    {
+      name: "Sorghum",
+      description: "Premium sorghum grains ideal for livestock feed and food processing. Drought-resistant crop with excellent nutritional value.",
+      image: sorghumImage,
+      category: "Grains",
     },
   ];
 
@@ -159,7 +180,7 @@ const Products = () => {
                   <CardDescription className="text-muted-foreground mb-4">{product.description}</CardDescription>
                   <Link to="/contact">
                     <Button className="w-full bg-primary hover:bg-primary/90">
-                      Request Quote
+                      ORDER
                     </Button>
                   </Link>
                 </CardContent>

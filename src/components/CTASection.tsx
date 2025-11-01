@@ -14,7 +14,7 @@ const CTASection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 animate-fade-in-up">
-            Ready to Partner with Us?
+            PARTNER WITH US
           </h2>
           <p className="text-lg md:text-xl text-white/90 mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             Let's work together to bring quality agricultural products to your business. 
